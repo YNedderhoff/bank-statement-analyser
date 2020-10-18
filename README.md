@@ -1,1 +1,1 @@
-# bank-statement-pdf-parser
+# bank-statement-analyser
