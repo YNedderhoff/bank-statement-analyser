@@ -15,12 +15,43 @@
     <description>Parses bank statements and performs analysis on them</description>
 
     <properties>
+        <!-- Java -->
         <java.version>11</java.version>
+        <!-- Dependencies -->
+        <apache-commons-io-version>2.8.0</apache-commons-io-version>
+        <apache-pdfbox-version>2.0.21</apache-pdfbox-version>
+        <guava-version>30.0-jre</guava-version>
         <sortpom-maven-plugin-version>2.12.0</sortpom-maven-plugin-version>
+        <spring-mock-version>2.0.8</spring-mock-version>
     </properties>
 
     <dependencies>
-
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${apache-commons-io-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>pdfbox</artifactId>
+            <version>${apache-pdfbox-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-mock</artifactId>
+            <version>${spring-mock-version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>javax.servlet</groupId>
+                    <artifactId>servlet-api</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
