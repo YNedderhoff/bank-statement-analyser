@@ -16,7 +16,7 @@
 
     <properties>
         <java.version>11</java.version>
-        <sortpom-maven-plugin-version>2.12.0</sortpom-maven-plugin-version>
+        <sortpom-maven-plugin-version>2.13.1</sortpom-maven-plugin-version>
     </properties>
 
     <dependencies>
